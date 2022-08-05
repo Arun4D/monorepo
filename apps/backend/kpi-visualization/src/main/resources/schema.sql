@@ -1,0 +1,1 @@
+Create table IF NOT EXISTS Sample(id INT NOT NULL IDENTITY(1,1), start_date Date);

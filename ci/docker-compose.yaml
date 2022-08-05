@@ -1,0 +1,16 @@
+version: "3"
+services:
+  kpivisualization-backend:
+    build:
+      context: ../apps/backend/
+      dockerfile: Dockerfile
+    environment:
+      - SERVER_PORT=7980
+    ports:
+      - "7980:7980"
+  kpivisualization-frontend:
+    build:
+      context: ../apps/frontend/
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
