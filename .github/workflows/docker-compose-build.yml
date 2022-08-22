@@ -28,9 +28,3 @@ jobs:
       - name: check docker compose status
         run: docker compose -f ./ci/docker-compose.yaml ps
       
-      - name: Permission
-        run: chmod 755 ./ci/healthcheck.sh
-
-      - name: Test the build
-        run: ./ci/healthcheck.sh ci-kpivisualization-frontend-1 120
-        #docker run --network container:ci-kpivisualization-frontend-1 appropriate/curl -s --retry 10 --retry-connrefused http://localhost:8000/
