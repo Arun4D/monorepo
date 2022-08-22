@@ -29,5 +29,5 @@ jobs:
         run: docker compose -f ./ci/docker-compose.yaml ps
 
       - name: Test the build
-        run: healthcheck.sh ci-kpivisualization-frontend-1 120
+        run: ./ci/healthcheck.sh ci-kpivisualization-frontend-1 120
         #docker run --network container:ci-kpivisualization-frontend-1 appropriate/curl -s --retry 10 --retry-connrefused http://localhost:8000/
