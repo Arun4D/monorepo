@@ -1,4 +1,4 @@
-container=$1;
+container=( "$@" );
 for cont in ${container[@]}
 do
   ./ci/healthcheck.sh $cont;
