@@ -24,6 +24,9 @@ jobs:
 
       - name: Build the stack
         run: docker compose -f ./ci/docker-compose.yaml up -d
+      
+      - name: check docker compose status
+        run: docker compose -f ./ci/docker-compose.yaml ps
 
       - name: Test the build
         run: docker run --network container:ci-kpivisualization-frontend appropriate/curl -s --retry 10 --retry-connrefused http://localhost:8000/
