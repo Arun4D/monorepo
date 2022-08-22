@@ -10,7 +10,7 @@ fi
 
 echo "Container: $container_name";
 echo "Timeout: $timeout sec";
-initalStatus = $(docker inspect --format='{{json .State.Health}}' $container_name)
+initalStatus=$(docker inspect --format='{{json .State.Health}}' $container_name)
 echo "Inital Status: $initalStatus";
 try=0;
 is_healthy="false";
