@@ -8,7 +8,6 @@ terraform {
 }
 
 provider "docker" {
-  host = "unix:///home/arun/.docker/desktop/docker.sock"
 }
 
 resource "docker_image" "nginx" {
