@@ -8,8 +8,7 @@ terraform {
 }
 
 provider "docker" {
-  host     = "ssh://arun@172.17.0.1:22"
-  ssh_opts = ["-o", "StrictHostKeyChecking=no", "-o", "UserKnownHostsFile=/dev/null"]
+ 
 }
 
 resource "docker_image" "nginx" {
